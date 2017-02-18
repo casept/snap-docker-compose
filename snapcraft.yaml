@@ -1,0 +1,21 @@
+name: docker-compose-casept # you probably want to 'snapcraft register <name>'
+version: '1.11.1'
+summary: A tool for defining and running multi-container Docker applications.
+
+ 
+description: |
+  Docker Compose allows you to define your multi-container application with all of its dependencies in a single file, then spin your application up in a single command.
+  This is an unofficial snap.
+
+apps:
+  docker-compose:
+    command: bin/docker-compose
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: classic # use 'strict' once you have the right plugs and slots
+
+parts:
+  dockercompose:
+    plugin: python
+    python-version: python3
+    source: https://github.com/docker/compose/archive/1.11.1.tar.gz        
