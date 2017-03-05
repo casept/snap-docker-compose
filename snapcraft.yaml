@@ -1,5 +1,5 @@
 name: docker-compose-casept # you probably want to 'snapcraft register <name>'
-version: '1.11.1'
+version: '1.11.2'
 summary: A tool for defining and running multi-container Docker applications.
 
  
@@ -18,4 +18,4 @@ parts:
   dockercompose:
     plugin: python
     python-version: python3
-    source: https://github.com/docker/compose/archive/1.11.1.tar.gz        
+    source: https://github.com/docker/compose/archive/1.11.2.tar.gz        
